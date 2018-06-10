@@ -11,11 +11,11 @@ app.listen(8000, () => {
 });
 
 app.route("/").get((req, res)=>{
-    res.send(201,
+    res.status(200).send(
         {
             folders: [
                 {'name': 'folder1'},
-                {'name': 'folder2'}
+                {'name': 'folder5'}
             ]
         }
     );
