@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OptionsBoxNewFolderComponent implements OnInit {
 
+  public toggleInput: boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggleInputElement() {
+    return this.toggleInput = !this.toggleInput;
+  }
 }

@@ -1,1 +1,6 @@
-<div>New Folder</div>
+<div (click)="toggleInputElement()"  
+    *ngIf="!toggleInput" 
+    ngDefaultControl>
+        New Folder
+</div>
+<input *ngIf="toggleInput" placeholder="New Folder">
