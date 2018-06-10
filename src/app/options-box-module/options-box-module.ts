@@ -6,10 +6,19 @@ import { OptionsBoxNewFileComponent } from './options-box-new-file/options-box-n
 import { OptionsBoxNewFolderComponent } from './options-box-new-folder/options-box-new-folder.component';
 import { OptionsBoxDeleteComponent } from './options-box-delete/options-box-delete.component';
 
+const components = [
+  OptionsBoxComponent, 
+  OptionsBoxEditFileComponent, 
+  OptionsBoxNewFileComponent, 
+  OptionsBoxNewFolderComponent, 
+  OptionsBoxDeleteComponent
+];
+
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [OptionsBoxComponent, OptionsBoxEditFileComponent, OptionsBoxNewFileComponent, OptionsBoxNewFolderComponent, OptionsBoxDeleteComponent]
+  declarations: [components],
+  exports: [OptionsBoxComponent]
 })
-export class OptionsBoxModuleModule { }
+export class OptionsBoxModule { }
