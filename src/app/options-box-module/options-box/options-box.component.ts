@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-options-box',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OptionsBoxComponent implements OnInit {
 
-  constructor() { }
+  nodeUrl = "http://localhost:8000/";
+
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
+    this.httpClient.get(this.nodeUrl).subscribe(res=>console.log(res));
   }
 
 }
