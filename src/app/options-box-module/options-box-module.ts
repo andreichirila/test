@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { OptionsBoxComponent } from './options-box/options-box.component';
 import { OptionsBoxEditFileComponent } from './options-box-edit-file/options-box-edit-file.component';
@@ -19,7 +20,8 @@ const components = [
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   declarations: [components],
   exports: [OptionsBoxComponent]
