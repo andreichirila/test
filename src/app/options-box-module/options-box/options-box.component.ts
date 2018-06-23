@@ -8,12 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class OptionsBoxComponent implements OnInit {
 
-  nodeUrl = "http://localhost:8000/";
+  nodeUrl = 'http://localhost:8000/';
 
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
-    this.httpClient.get(this.nodeUrl).subscribe(res=>console.log(res));
+    this.httpClient.get(this.nodeUrl).subscribe(console.log);
   }
 
 }
